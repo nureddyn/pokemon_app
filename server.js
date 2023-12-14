@@ -16,8 +16,12 @@ app.get('/pokemon', (req, res) => {
 });
 
 app.get('/pokemon/:id', (req, res) => {
-    res.send(req.params.id);
+    res.render('Show', {pokemonIndex: req.params.id});
 });
+
+// app.get('/show', (req, res) => {
+//     res.render('Show');
+// });
 
 app.listen(5000, () => {
     console.log("visit: localhost:5000");

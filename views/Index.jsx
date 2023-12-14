@@ -10,7 +10,9 @@ export default function Index({ pokemons }) {
           return (
             <li key={i}>
               <p>
-                {`${pokemon.name.charAt(0).toUpperCase()}${pokemon.name.slice(1)}`}
+                <a href={`/pokemon/${i}`}>
+                  {`${pokemon.name.charAt(0).toUpperCase()}${pokemon.name.slice(1)}`}
+                </a>
               </p>
             </li>
           )
