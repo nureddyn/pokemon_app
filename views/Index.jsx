@@ -1,5 +1,5 @@
 import React from 'react'
-import styles, { index, indexHeader } from './styles';
+import styles, { anchor, index, indexHeader } from './styles';
 
 export default function Index({ pokemons }) {
   return (
@@ -10,7 +10,7 @@ export default function Index({ pokemons }) {
           return (
             <li key={i}>
               <p>
-                <a href={`/pokemon/${i}`}>
+                <a style={anchor} href={`/pokemon/${i}`}>
                   {`${pokemon.name.charAt(0).toUpperCase()}${pokemon.name.slice(1)}`}
                 </a>
               </p>
