@@ -1,12 +1,14 @@
-import React from 'react'
+import React from 'react';
+import Header from './Header';
+import { page, pageHeader, anchor, image } from './styles';
 
 export default function Show({ pokemon }) {
   return (
-    <div>
-      <h1>Gotta Catch 'Em All</h1>
+    <div style={page}>
+      <h1 style={pageHeader}>Gotta Catch 'Em All</h1>
       <h2>{`${pokemon.name.charAt(0).toUpperCase()}${pokemon.name.slice(1)}`}</h2>
-      <img src={`${pokemon.img}.jpg`} alt={`${pokemon.name} image`} />
-      <a href='/'>Back</a>
+      <img style={image} src={`${pokemon.img}.${pokemon.type}`} alt={`${pokemon.name} image`} />
+      <a style={anchor} href='/pokemon'>Back</a>
     </div>
   )
 }
